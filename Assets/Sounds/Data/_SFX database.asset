@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d9ae6f6e41da44380517fdbf528d67, type: 3}
+  m_Name: _SFX database
+  m_EditorClassIdentifier: 
+  soundEffectDatas:
+  - {fileID: 11400000, guid: d25caba9687c17043aaf3c51cb2c3c89, type: 2}
+  - {fileID: 11400000, guid: dc2fff50233001b48956eaafa72b2089, type: 2}
+  - {fileID: 11400000, guid: bc4386739134d0c4ab37ebb15f260019, type: 2}
+  - {fileID: 11400000, guid: 1c99a499d01815b42b3fe1f78389d089, type: 2}
+  - {fileID: 11400000, guid: dd82e68c668986f4694563a9cfaad9b9, type: 2}
+  - {fileID: 11400000, guid: f88e541a9f90ecf488ebed346c79deaf, type: 2}
+  - {fileID: 11400000, guid: f3b6817ad735ab04a9f26a1cd44c98b1, type: 2}
+  - {fileID: 11400000, guid: f05c7d71ed4462247abbfba8ecba61e7, type: 2}
+  - {fileID: 11400000, guid: 042513ac995cb2140a2a0b8e504be21d, type: 2}
+  - {fileID: 11400000, guid: a4d9f2470bb0c19438b004a337098745, type: 2}
+  - {fileID: 11400000, guid: c1a80339a2554524da0ac3d4dca981be, type: 2}
+  - {fileID: 11400000, guid: 0c2dd9cdcce71e0409491e71d329845e, type: 2}
+  - {fileID: 11400000, guid: a290a3b0487c36541a41bb8b7ec864e0, type: 2}
+  - {fileID: 11400000, guid: e12fac3f0e9370e489342341ae775496, type: 2}
+  - {fileID: 11400000, guid: 890cd1917d554e14e82fb722076e9555, type: 2}
+  - {fileID: 11400000, guid: 0c3468d514e2e734f9710130822dcfc4, type: 2}
+  - {fileID: 11400000, guid: 74a11e257d3e8ac42b6f3f19fc2b3c9a, type: 2}
+  - {fileID: 11400000, guid: d838cd2b531b5eb4bbdcc3ee98c9bc96, type: 2}
+  - {fileID: 11400000, guid: 5a2ed777236fd8f458c193c6071cb6c9, type: 2}
+  - {fileID: 11400000, guid: 02d3761ee6ba7804086de241ed74eb60, type: 2}
+  - {fileID: 11400000, guid: 920834c239e2991468794a8d84943e05, type: 2}
+  - {fileID: 11400000, guid: b5ae6999bee28b84a8408ff42debb847, type: 2}
+  - {fileID: 11400000, guid: 9c4e11a56ebcb1147a92ec6f1af77f09, type: 2}
+  - {fileID: 11400000, guid: c1436aa2fb9593f44bf9744d619a2f17, type: 2}
+  - {fileID: 11400000, guid: b32afad76f943034eaa6e9a1a677ad49, type: 2}
+  - {fileID: 11400000, guid: 822a1aafd8448d54594d82f0cd645af4, type: 2}
+  - {fileID: 11400000, guid: c2511771063b751479222f8bd9de0503, type: 2}
+  idleSoundChance: 0
+  idleSoundResetRange: 0
