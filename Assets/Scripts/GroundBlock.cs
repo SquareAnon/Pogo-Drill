@@ -8,7 +8,7 @@ public enum GemType
 public class GroundBlock : MonoBehaviour
 {
     public BlockType type;
-    public Material white;
+    public Material white, defaultMat;
     public GameObject drilledFX, damageFX;
     public int maxHP = 1, hp;
     protected bool iFrame;
@@ -41,12 +41,21 @@ public class GroundBlock : MonoBehaviour
     public bool exploding;
     public LayerMask playerGroundMask;
 
+    Block block;
 
-    public void Init(int x, int y)
+    public void Init( Block bd)
     {
+        Collider co = GetComponent<Collider>();
+        co.enabled = true;
+        exploding = false;
 
-        this.xy = new Vector2Int(x,y);
-
+        block = bd;
+        Renderer r = GetComponent<Renderer>();
+        r.sharedMaterial = defaultMat;
+        type = bd.type;
+        hp = bd.hp;
+        maxHP = bd.maxHP;
+        gemType = bd.gemType;
         UpdateDictionary();
         explosionSprite.gameObject.SetActive(false);
         gemMeshFilter.mesh = null;
@@ -58,7 +67,7 @@ public class GroundBlock : MonoBehaviour
                 gemMeshFilter.mesh = gemMeshes[(int)gemType];
                 hp = maxHP;
                 if (hp > 0) crack.mesh = crackMeshes[Mathf.Clamp(maxHP - hp, 0, crackMeshes.Length)];
-                if (visuals.Count >= maxHP && visuals[maxHP].meshes.Length > 0) GetComponent<MeshFilter>().mesh = visuals[maxHP].meshes[Random.Range(0, visuals[maxHP].meshes.Length)];
+                if (visuals.Count >= maxHP && visuals[maxHP-1].meshes.Length > 0) GetComponent<MeshFilter>().mesh = visuals[maxHP-1].meshes[Random.Range(0, visuals[maxHP - 1].meshes.Length)];
                 break;
             case BlockType.bomb:
                  GetComponent<MeshFilter>().mesh = bombMesh;
@@ -73,8 +82,8 @@ public class GroundBlock : MonoBehaviour
 
     public void UpdateDictionary()
     {
-        if (!Cave._.blockDataDict.ContainsKey(xy)) Cave._.blockDataDict.Add(new Vector2Int(xy.x, xy.y), new BlockData(hp, maxHP, type, gemType));
-        else Cave._.blockDataDict[xy] = new BlockData(hp, maxHP, type, gemType);
+        if (!Cave._.blockDataDict.ContainsKey(xy)) Cave._.blockDataDict.Add(new Vector2Int(xy.x, xy.y), new Block(new Vector2Int(xy.x, xy.y), hp, maxHP, type, gemType));
+        else Cave._.blockDataDict[xy] = new Block(new Vector2Int(xy.x, xy.y), hp, maxHP, type, gemType);
     }
 
     public void AddProp()
@@ -164,8 +173,7 @@ public class GroundBlock : MonoBehaviour
                 Collider c = GetComponent<Collider>();
                 c.enabled = false;
                 Destroy(Instantiate(drilledFX, transform.position, Quaternion.Euler(direction)), 1f);
-                Cave._.Remove(this);
-                if (Cave._.blockDataDict.ContainsKey(xy)) Cave._.blockDataDict.Remove(xy);
+                Cave._.Remove(block);
                 break;
 
             case BlockType.bomb: 
@@ -251,10 +259,9 @@ public class GroundBlock : MonoBehaviour
         exploding = false;
         explosionSprite.gameObject.SetActive(false);
         iFrame = false;
-
+        Cave._.Remove(block);
         // Destroy(Instantiate(drilledFX, transform.position, Quaternion.Euler(direction)), 1f);
-        Cave._.Remove(this);
-        if (Cave._.blockDataDict.ContainsKey(xy)) Cave._.blockDataDict.Remove(xy);
+
 
     }
 

@@ -421,6 +421,7 @@ public class Pogo : MonoBehaviour
 
     public void Die()
     {
+        SoundEffectManager._.RemoveSound("Fall");
         isDead = true;
         boosting = false;
         charging = false;

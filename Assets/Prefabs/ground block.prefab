@@ -116,11 +116,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   white: {fileID: 2100000, guid: 58814e28775252d458e35d2d36c97278, type: 2}
+  defaultMat: {fileID: 2100000, guid: 8d95e046a868bb74e8f7662f8d41147a, type: 2}
   drilledFX: {fileID: 796683514684532676, guid: 3f621db25b094df4d8e58db6302fd977,
     type: 3}
   damageFX: {fileID: 796683514684532676, guid: 2046f7f5b3a48be4bb15781c488b1b02, type: 3}
   maxHP: 1
   hp: 1
+  xy: {x: 0, y: 0}
   visuals:
   - blockName: ground 1
     meshes:

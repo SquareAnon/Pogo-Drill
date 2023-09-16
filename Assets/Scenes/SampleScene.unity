@@ -6017,6 +6017,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
         type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
+        type: 3}
       propertyPath: maxHP
       value: 4
       objectReference: {fileID: 0}
@@ -6069,150 +6074,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
---- !u!1 &390210922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 13050786460849072, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 390210921}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &390210923 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4459296479319716461, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 390210921}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &390210924 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: 2098509059604676414, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 390210921}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &390210925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390210922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef40dcd43ee7854386c8a7c1125cb7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  white: {fileID: 2100000, guid: 58814e28775252d458e35d2d36c97278, type: 2}
-  drilledFX: {fileID: 796683514684532676, guid: 3f621db25b094df4d8e58db6302fd977,
-    type: 3}
-  damageFX: {fileID: 796683514684532676, guid: 2046f7f5b3a48be4bb15781c488b1b02, type: 3}
-  maxHP: 1
-  hp: 1
-  xy: {x: 0, y: 0}
-  visuals:
-  - blockName: ground 1
-    meshes:
-    - {fileID: 8744468600368383185, guid: 10d2467639413794a9a93a9a92c7f380, type: 3}
-    - {fileID: -7154367595447024684, guid: bc7498e65fbd41044bc318dc927160a2, type: 3}
-    - {fileID: 214292804162827556, guid: 2d540e3340ca3e849aaf01b3300154dc, type: 3}
-  - blockName: ground 2
-    meshes: []
-  - blockName: ground 3
-    meshes: []
-  bombMesh: {fileID: -6156976558422926439, guid: 18c2bbac31e4a0a4a9c12ebd02cfdb35,
-    type: 3}
-  metalMesh: {fileID: 4793896361407393136, guid: a897425b48cee754aa4a4c97127ed5b9,
-    type: 3}
-  crack: {fileID: 0}
-  crackMeshes:
-  - {fileID: 0}
-  - {fileID: 1535147453865644904, guid: 3fc804fb43465be41b20fefd223be8ee, type: 3}
-  - {fileID: -7629218113929961142, guid: ae02aea4481830c469ab599870b77072, type: 3}
-  - {fileID: -5534910564401164947, guid: 3c3af3888094f6d40ae7918c79696618, type: 3}
-  gemType: 0
-  gemMeshFilter: {fileID: 390210924}
-  gemMeshes:
-  - {fileID: 0}
-  - {fileID: -7615396341540328043, guid: d4fdb211d5e192646bba054c880730f6, type: 3}
-  - {fileID: -6510750224669175727, guid: 9953337229a413f408864c9072c2f77b, type: 3}
-  - {fileID: -8787420278047080656, guid: c582803d5926ef741aa89f1f13656552, type: 3}
-  - {fileID: 4306747591942989996, guid: cc9cb746955e3b44c8b61176c2fa80c4, type: 3}
-  - {fileID: 6090316629543274135, guid: 3935dd7d1ffe54b41900fb799080a766, type: 3}
-  gemFXPrefabs:
-  - {fileID: 0}
-  - {fileID: 2890048696817841731, guid: b2e3798968fb10749bf42ce5fdbea329, type: 3}
-  - {fileID: 4060798290413158553, guid: f3698230cbec45f4d83b5e0adef10069, type: 3}
-  - {fileID: 4060798290413158553, guid: 8535395bafed48a4081e79724a31f64c, type: 3}
-  - {fileID: 4060798290413158553, guid: 184b5c6cf52cc6e48ad015428053e72b, type: 3}
-  propFilter: {fileID: 0}
-  propMeshes:
-  - {fileID: 3906130615805142554, guid: f15255f0ea5214649b2ab901cfe8fd43, type: 3}
-  - {fileID: 4385224548862277291, guid: a40d6b35ac6250a4db879201a6c035b1, type: 3}
-  - {fileID: -7588155868070637639, guid: f08d1e26301dac34ca7240a37daffda1, type: 3}
-  - {fileID: 1923233590443265777, guid: 1981c5408aa1a18428886c64c4030c2b, type: 3}
-  explosionRange: 5
-  explosionDuration: 0.3
-  explosionCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  explosionCooldown: 0.1
-  explosionDelay: 2
-  explosionSprite: {fileID: 390210923}
-  explosiongradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.6692234, b: 0, a: 1}
-    key1: {r: 1, g: 0.4317267, b: 0, a: 1}
-    key2: {r: 0.9433962, g: 0, b: 0.028558047, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 28260
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 62482
-    atime2: 65535
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
-  exploding: 0
-  playerGroundMask:
-    serializedVersion: 2
-    m_Bits: 72
 --- !u!1001 &403795999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18600,18 +18463,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocksDrilled: 0
   lava: {fileID: 1706628167}
+  hasLava: 0
   blockPrefab: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
     type: 3}
   stalatitesPrefab: {fileID: 3209305688321419096, guid: 92730ba6d6ac560489ae27b8fdaf30b1,
     type: 3}
   chunkHeight: 10
   currentChunk: 0
-  previousChunk: 0
-  lastChunk: 0
+  previousChunk: 1
+  prevPreviousChunk: 0
   startX: 0
   startY: 0
   sizeX: 40
-  sizeY: 1000
+  sizeY: 40
   noiseScale: 8
   bombChance: 99
   metalChance: 60
@@ -19240,7 +19104,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &983271011
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19257,7 +19121,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1046079540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8571970468666765275, guid: f8c45def980c42e4cb2530d83cf256e0,
@@ -19610,6 +19475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
         type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
+        type: 3}
       propertyPath: maxHP
       value: 4
       objectReference: {fileID: 0}
@@ -19662,150 +19532,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
---- !u!1 &1108802884 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 13050786460849072, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1108802883}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1108802885 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4459296479319716461, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1108802883}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &1108802886 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: 2098509059604676414, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1108802883}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1108802887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108802884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef40dcd43ee7854386c8a7c1125cb7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  white: {fileID: 2100000, guid: 58814e28775252d458e35d2d36c97278, type: 2}
-  drilledFX: {fileID: 796683514684532676, guid: 3f621db25b094df4d8e58db6302fd977,
-    type: 3}
-  damageFX: {fileID: 796683514684532676, guid: 2046f7f5b3a48be4bb15781c488b1b02, type: 3}
-  maxHP: 1
-  hp: 1
-  xy: {x: 0, y: 0}
-  visuals:
-  - blockName: ground 1
-    meshes:
-    - {fileID: 8744468600368383185, guid: 10d2467639413794a9a93a9a92c7f380, type: 3}
-    - {fileID: -7154367595447024684, guid: bc7498e65fbd41044bc318dc927160a2, type: 3}
-    - {fileID: 214292804162827556, guid: 2d540e3340ca3e849aaf01b3300154dc, type: 3}
-  - blockName: ground 2
-    meshes: []
-  - blockName: ground 3
-    meshes: []
-  bombMesh: {fileID: -6156976558422926439, guid: 18c2bbac31e4a0a4a9c12ebd02cfdb35,
-    type: 3}
-  metalMesh: {fileID: 4793896361407393136, guid: a897425b48cee754aa4a4c97127ed5b9,
-    type: 3}
-  crack: {fileID: 0}
-  crackMeshes:
-  - {fileID: 0}
-  - {fileID: 1535147453865644904, guid: 3fc804fb43465be41b20fefd223be8ee, type: 3}
-  - {fileID: -7629218113929961142, guid: ae02aea4481830c469ab599870b77072, type: 3}
-  - {fileID: -5534910564401164947, guid: 3c3af3888094f6d40ae7918c79696618, type: 3}
-  gemType: 0
-  gemMeshFilter: {fileID: 1108802886}
-  gemMeshes:
-  - {fileID: 0}
-  - {fileID: -7615396341540328043, guid: d4fdb211d5e192646bba054c880730f6, type: 3}
-  - {fileID: -6510750224669175727, guid: 9953337229a413f408864c9072c2f77b, type: 3}
-  - {fileID: -8787420278047080656, guid: c582803d5926ef741aa89f1f13656552, type: 3}
-  - {fileID: 4306747591942989996, guid: cc9cb746955e3b44c8b61176c2fa80c4, type: 3}
-  - {fileID: 6090316629543274135, guid: 3935dd7d1ffe54b41900fb799080a766, type: 3}
-  gemFXPrefabs:
-  - {fileID: 0}
-  - {fileID: 2890048696817841731, guid: b2e3798968fb10749bf42ce5fdbea329, type: 3}
-  - {fileID: 4060798290413158553, guid: f3698230cbec45f4d83b5e0adef10069, type: 3}
-  - {fileID: 4060798290413158553, guid: 8535395bafed48a4081e79724a31f64c, type: 3}
-  - {fileID: 4060798290413158553, guid: 184b5c6cf52cc6e48ad015428053e72b, type: 3}
-  propFilter: {fileID: 0}
-  propMeshes:
-  - {fileID: 3906130615805142554, guid: f15255f0ea5214649b2ab901cfe8fd43, type: 3}
-  - {fileID: 4385224548862277291, guid: a40d6b35ac6250a4db879201a6c035b1, type: 3}
-  - {fileID: -7588155868070637639, guid: f08d1e26301dac34ca7240a37daffda1, type: 3}
-  - {fileID: 1923233590443265777, guid: 1981c5408aa1a18428886c64c4030c2b, type: 3}
-  explosionRange: 5
-  explosionDuration: 0.3
-  explosionCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  explosionCooldown: 0.1
-  explosionDelay: 2
-  explosionSprite: {fileID: 1108802885}
-  explosiongradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.6692234, b: 0, a: 1}
-    key1: {r: 1, g: 0.4317267, b: 0, a: 1}
-    key2: {r: 0.9433962, g: 0, b: 0.028558047, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 28260
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 62482
-    atime2: 65535
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
-  exploding: 0
-  playerGroundMask:
-    serializedVersion: 2
-    m_Bits: 72
 --- !u!1 &1117685291
 GameObject:
   m_ObjectHideFlags: 0
@@ -19972,6 +19700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -26148,7 +25877,7 @@ MonoBehaviour:
   restart: 0
 --- !u!95 &1456943827
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26165,7 +25894,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1492095976
 GameObject:
   m_ObjectHideFlags: 0
@@ -33627,6 +33357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
         type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
+        type: 3}
       propertyPath: maxHP
       value: 4
       objectReference: {fileID: 0}
@@ -33679,150 +33414,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
---- !u!1 &1842782122 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 13050786460849072, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1842782121}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1842782123 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4459296479319716461, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1842782121}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &1842782124 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: 2098509059604676414, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1842782121}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1842782125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842782122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef40dcd43ee7854386c8a7c1125cb7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  white: {fileID: 2100000, guid: 58814e28775252d458e35d2d36c97278, type: 2}
-  drilledFX: {fileID: 796683514684532676, guid: 3f621db25b094df4d8e58db6302fd977,
-    type: 3}
-  damageFX: {fileID: 796683514684532676, guid: 2046f7f5b3a48be4bb15781c488b1b02, type: 3}
-  maxHP: 1
-  hp: 1
-  xy: {x: 0, y: 0}
-  visuals:
-  - blockName: ground 1
-    meshes:
-    - {fileID: 8744468600368383185, guid: 10d2467639413794a9a93a9a92c7f380, type: 3}
-    - {fileID: -7154367595447024684, guid: bc7498e65fbd41044bc318dc927160a2, type: 3}
-    - {fileID: 214292804162827556, guid: 2d540e3340ca3e849aaf01b3300154dc, type: 3}
-  - blockName: ground 2
-    meshes: []
-  - blockName: ground 3
-    meshes: []
-  bombMesh: {fileID: -6156976558422926439, guid: 18c2bbac31e4a0a4a9c12ebd02cfdb35,
-    type: 3}
-  metalMesh: {fileID: 4793896361407393136, guid: a897425b48cee754aa4a4c97127ed5b9,
-    type: 3}
-  crack: {fileID: 0}
-  crackMeshes:
-  - {fileID: 0}
-  - {fileID: 1535147453865644904, guid: 3fc804fb43465be41b20fefd223be8ee, type: 3}
-  - {fileID: -7629218113929961142, guid: ae02aea4481830c469ab599870b77072, type: 3}
-  - {fileID: -5534910564401164947, guid: 3c3af3888094f6d40ae7918c79696618, type: 3}
-  gemType: 0
-  gemMeshFilter: {fileID: 1842782124}
-  gemMeshes:
-  - {fileID: 0}
-  - {fileID: -7615396341540328043, guid: d4fdb211d5e192646bba054c880730f6, type: 3}
-  - {fileID: -6510750224669175727, guid: 9953337229a413f408864c9072c2f77b, type: 3}
-  - {fileID: -8787420278047080656, guid: c582803d5926ef741aa89f1f13656552, type: 3}
-  - {fileID: 4306747591942989996, guid: cc9cb746955e3b44c8b61176c2fa80c4, type: 3}
-  - {fileID: 6090316629543274135, guid: 3935dd7d1ffe54b41900fb799080a766, type: 3}
-  gemFXPrefabs:
-  - {fileID: 0}
-  - {fileID: 2890048696817841731, guid: b2e3798968fb10749bf42ce5fdbea329, type: 3}
-  - {fileID: 4060798290413158553, guid: f3698230cbec45f4d83b5e0adef10069, type: 3}
-  - {fileID: 4060798290413158553, guid: 8535395bafed48a4081e79724a31f64c, type: 3}
-  - {fileID: 4060798290413158553, guid: 184b5c6cf52cc6e48ad015428053e72b, type: 3}
-  propFilter: {fileID: 0}
-  propMeshes:
-  - {fileID: 3906130615805142554, guid: f15255f0ea5214649b2ab901cfe8fd43, type: 3}
-  - {fileID: 4385224548862277291, guid: a40d6b35ac6250a4db879201a6c035b1, type: 3}
-  - {fileID: -7588155868070637639, guid: f08d1e26301dac34ca7240a37daffda1, type: 3}
-  - {fileID: 1923233590443265777, guid: 1981c5408aa1a18428886c64c4030c2b, type: 3}
-  explosionRange: 5
-  explosionDuration: 0.3
-  explosionCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  explosionCooldown: 0.1
-  explosionDelay: 2
-  explosionSprite: {fileID: 1842782123}
-  explosiongradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.6692234, b: 0, a: 1}
-    key1: {r: 1, g: 0.4317267, b: 0, a: 1}
-    key2: {r: 0.9433962, g: 0, b: 0.028558047, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 28260
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 62482
-    atime2: 65535
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
-  exploding: 0
-  playerGroundMask:
-    serializedVersion: 2
-    m_Bits: 72
 --- !u!1 &1855773508
 GameObject:
   m_ObjectHideFlags: 0
@@ -34192,12 +33785,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881902746}
   m_CullTransparentMesh: 1
---- !u!212 &1882315858 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4459296479319716461, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 3636598673335649104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1897102508
 GameObject:
   m_ObjectHideFlags: 0
@@ -49937,129 +49524,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3437196368578928543}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1770736291414557209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3636598673335649105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef40dcd43ee7854386c8a7c1125cb7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  white: {fileID: 2100000, guid: 58814e28775252d458e35d2d36c97278, type: 2}
-  drilledFX: {fileID: 796683514684532676, guid: 3f621db25b094df4d8e58db6302fd977,
-    type: 3}
-  damageFX: {fileID: 796683514684532676, guid: 2046f7f5b3a48be4bb15781c488b1b02, type: 3}
-  maxHP: 1
-  hp: 1
-  xy: {x: 0, y: 0}
-  visuals:
-  - blockName: ground 1
-    meshes:
-    - {fileID: 8744468600368383185, guid: 10d2467639413794a9a93a9a92c7f380, type: 3}
-    - {fileID: -7154367595447024684, guid: bc7498e65fbd41044bc318dc927160a2, type: 3}
-    - {fileID: 214292804162827556, guid: 2d540e3340ca3e849aaf01b3300154dc, type: 3}
-  - blockName: ground 2
-    meshes: []
-  - blockName: ground 3
-    meshes: []
-  bombMesh: {fileID: -6156976558422926439, guid: 18c2bbac31e4a0a4a9c12ebd02cfdb35,
-    type: 3}
-  metalMesh: {fileID: 4793896361407393136, guid: a897425b48cee754aa4a4c97127ed5b9,
-    type: 3}
-  crack: {fileID: 0}
-  crackMeshes:
-  - {fileID: 0}
-  - {fileID: 1535147453865644904, guid: 3fc804fb43465be41b20fefd223be8ee, type: 3}
-  - {fileID: -7629218113929961142, guid: ae02aea4481830c469ab599870b77072, type: 3}
-  - {fileID: -5534910564401164947, guid: 3c3af3888094f6d40ae7918c79696618, type: 3}
-  gemType: 0
-  gemMeshFilter: {fileID: 3636598673335649107}
-  gemMeshes:
-  - {fileID: 0}
-  - {fileID: -7615396341540328043, guid: d4fdb211d5e192646bba054c880730f6, type: 3}
-  - {fileID: -6510750224669175727, guid: 9953337229a413f408864c9072c2f77b, type: 3}
-  - {fileID: -8787420278047080656, guid: c582803d5926ef741aa89f1f13656552, type: 3}
-  - {fileID: 4306747591942989996, guid: cc9cb746955e3b44c8b61176c2fa80c4, type: 3}
-  - {fileID: 6090316629543274135, guid: 3935dd7d1ffe54b41900fb799080a766, type: 3}
-  gemFXPrefabs:
-  - {fileID: 0}
-  - {fileID: 2890048696817841731, guid: b2e3798968fb10749bf42ce5fdbea329, type: 3}
-  - {fileID: 4060798290413158553, guid: f3698230cbec45f4d83b5e0adef10069, type: 3}
-  - {fileID: 4060798290413158553, guid: 8535395bafed48a4081e79724a31f64c, type: 3}
-  - {fileID: 4060798290413158553, guid: 184b5c6cf52cc6e48ad015428053e72b, type: 3}
-  propFilter: {fileID: 0}
-  propMeshes:
-  - {fileID: 3906130615805142554, guid: f15255f0ea5214649b2ab901cfe8fd43, type: 3}
-  - {fileID: 4385224548862277291, guid: a40d6b35ac6250a4db879201a6c035b1, type: 3}
-  - {fileID: -7588155868070637639, guid: f08d1e26301dac34ca7240a37daffda1, type: 3}
-  - {fileID: 1923233590443265777, guid: 1981c5408aa1a18428886c64c4030c2b, type: 3}
-  explosionRange: 5
-  explosionDuration: 0.3
-  explosionCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  explosionCooldown: 0.1
-  explosionDelay: 2
-  explosionSprite: {fileID: 1882315858}
-  explosiongradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.6692234, b: 0, a: 1}
-    key1: {r: 1, g: 0.4317267, b: 0, a: 1}
-    key2: {r: 0.9433962, g: 0, b: 0.028558047, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 28260
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 62482
-    atime2: 65535
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
-  exploding: 0
-  playerGroundMask:
-    serializedVersion: 2
-    m_Bits: 72
 --- !u!1001 &3175953520303232977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50292,46 +49756,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
         type: 3}
-      propertyPath: hp
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: maxHP
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: meshes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: meshes.Array.data[0]
-      value: 
-      objectReference: {fileID: 4793896361407393136, guid: a897425b48cee754aa4a4c97127ed5b9,
-        type: 3}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: meshes.Array.data[1]
-      value: 
-      objectReference: {fileID: 259295144189699190, guid: 36503dfde01aafa4e95e447c9bd201c3,
-        type: 3}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: meshes.Array.data[2]
-      value: 
-      objectReference: {fileID: 5204612486966377838, guid: 0df1f6decc575b348b948d0c79ca140e,
-        type: 3}
-    - target: {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-        type: 3}
-      propertyPath: crackMeshes.Array.size
-      value: 0
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2448671660557183521, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
         type: 3}
@@ -50349,21 +49775,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 932021161376935654, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b2b5c8de7b3034a89cb6bd402526bd, type: 3}
---- !u!1 &3636598673335649105 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 13050786460849072, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 3636598673335649104}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &3636598673335649107 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: 2098509059604676414, guid: 84b2b5c8de7b3034a89cb6bd402526bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 3636598673335649104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5178512851817150116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2234832992794398816, guid: c3e945d1b3857ac4d93985e07df3cf69,

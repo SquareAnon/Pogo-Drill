@@ -11,6 +11,7 @@ public class Lava : MonoBehaviour
     public float distanceThreshold = 5;
     public float riseDelay;
     [SerializeField]float speed;
+   
 
     void Start()
     {
