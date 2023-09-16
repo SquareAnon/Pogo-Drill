@@ -110,6 +110,8 @@ public class Pogo : MonoBehaviour
     public Vector3 jetPackVelocity;
     public System.Action<float, float> OnJetpackChange;
 
+    public float maxY;
+
     private void Awake()
     {
         _ = this;
@@ -224,7 +226,7 @@ public class Pogo : MonoBehaviour
         }
         velocity += jetPackVelocity;
         Vector3 p = prevPos + velocity;
-        p.y = Mathf.Clamp(p.y, -1000, 109);
+        if (p.y > maxY) p.y = maxY;
         transform.position = p;
        
 

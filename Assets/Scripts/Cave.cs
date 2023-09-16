@@ -48,13 +48,49 @@ public class Cave : MonoBehaviour
 
     public ObjectPool<GroundBlock> groundBlockPool;
     public bool usePool;
-   [SerializeField] List<List<Block>> groundBlockChunks;
+   [SerializeField] List<Chunk> groundBlockChunks;
 
+
+
+    [System.Serializable]
+    public class Chunk
+    {
+        public List<Block> blocks;
+        public int startY, endY;
+        public bool active;
+        public Chunk (List<Block> _b, int _sY, int _eY, bool _active )
+        {
+            blocks = _b;
+            startY = _sY;
+            endY = _eY;
+            active = _active;
+        }
+
+        public void Activate()
+        {
+            if (active) return;
+            active = true;
+            foreach (var item in blocks)
+            {
+                item.Activate();
+            }
+        }
+
+        public void Deactivate()
+        {
+            if(!active) return;
+            active = false;
+            foreach (var item in blocks)
+            {
+                item.Deactivate();
+            }
+        }
+    }
 
     private void Awake()
     {
         _ = this;
-        groundBlockChunks = new List<List<Block>>();
+        groundBlockChunks = new List<Chunk>();
         lava.gameObject.SetActive(hasLava);
 
     }
@@ -63,7 +99,7 @@ public class Cave : MonoBehaviour
     {
         float realYPos = Pogo._.transform.position.y;
         if (realYPos > 0) realYPos = 0;
-        int chunkPos = (int)MathF.Abs(realYPos/chunkHeight) ;
+        int chunkPos = (int)MathF.Abs(( realYPos)/chunkHeight) ;
         if (chunkPos != currentChunk)
         {
 
@@ -72,51 +108,34 @@ public class Cave : MonoBehaviour
             currentChunk = chunkPos;
           //if(  previousChunk > lastChunk) lastChunk = previousChunk; 
             LoadUnloadChunk(prevPreviousChunk, currentChunk);
-
-
         }
     }
 
-
     public void LoadUnloadChunk(int oldChunk, int newChunk)
     {
-        int newStartY = newChunk * chunkHeight;
-        int oldStartY = oldChunk * chunkHeight;
-        if (!usePool) return;
-        if(oldChunk == newChunk) return;
-        if (groundBlockChunks.Count < 1) return;
-        print("there are " + groundBlockPool.CountAll + " blocks in the pool");
-
-        if (groundBlockChunks.Count >= oldChunk && oldChunk >= 0)
+        int aboveChunk = newChunk - 1;
+        int belowChunk = newChunk + 1;
+        for (int i = 0; i < groundBlockChunks.Count; i++)
         {
-            print("there are " + groundBlockChunks.Count + " chunks, unloading" + oldChunk);
-            foreach (var item in groundBlockChunks[oldChunk])
-            {
-                item.Deactivate();
-            }
+            if (i == aboveChunk || i == newChunk || i == belowChunk) continue; 
+            groundBlockChunks[i].Deactivate();
         }
 
-        if (groundBlockChunks.Count > newChunk)
-        {
-            foreach (var item in groundBlockChunks[newChunk])
-            {
-                item.Activate();
-            }
-        }
+
+        if (aboveChunk >= 0 && groundBlockChunks.Count > aboveChunk)
+          groundBlockChunks[aboveChunk].Activate();
+        if (newChunk >= 0 && groundBlockChunks.Count > newChunk)
+            groundBlockChunks[newChunk].Activate();
+        if (belowChunk >= 0 && groundBlockChunks.Count > belowChunk)
+            groundBlockChunks[belowChunk].Activate();
         else
-        {
-            GenerateNewChunk(newChunk);
-
-        }
-
-     
-       
-
+            GenerateNewChunk(belowChunk);
     }
 
     void GenerateNewChunk(int chunk)
     {
-        groundBlockChunks.Add(new List<Block>());
+        Chunk newChunk = new Chunk(new List<Block>(), (chunk * chunkHeight) , (chunk * chunkHeight) + chunkHeight, true);
+        groundBlockChunks.Add(newChunk);
         //loop through x and y and create new blocks and add them to the chunk
         for (int y = 0; y < chunkHeight; y++)
         {
@@ -124,7 +143,7 @@ public class Cave : MonoBehaviour
             {
                 Block b = GenerateBlock(x, chunk * chunkHeight + y, true);
                 if(b!= null)
-                groundBlockChunks[chunk].Add(b);
+                groundBlockChunks[chunk].blocks.Add(b);
             }
         }
     }
@@ -132,21 +151,10 @@ public class Cave : MonoBehaviour
 
     void GenerateBlock(int x, int y, Block bd)
     {
-        //print("pool size " + groundBlockPool.CountAll);
-        //GroundBlock g = usePool ? groundBlockPool.Get() : Instantiate(blockPrefab, new Vector3(startX + x, startY - y, 0), Quaternion.identity, transform);
-        //    g.transform.position = new Vector3(startX + x, startY -  y, 0);
-          
-        //    g.Init(x, y, bd);
-
-        //Block b = new Block(1, 1, BlockType.ground, (GemType)gem);
         bd.xy = new Vector2Int(x, y);   
         bd.Activate();
-
-
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         groundBlockPool = new ObjectPool<GroundBlock>(() =>
@@ -161,7 +169,7 @@ public class Cave : MonoBehaviour
         }, block =>
         {
             Destroy(block.gameObject);
-        }, true, 300, 400);
+        }, true, 600, 800);
 
         CreateCave();
 
@@ -190,19 +198,8 @@ public class Cave : MonoBehaviour
             GenerateBlock((int)startX - 1, (int)startY - y, metalWall);
             GenerateBlock((int)startX + sizeX, (int)startY - y, metalWall);
         }
-        for (int x = 0; x < sizeX; x++)
-            GenerateBlock((int)startX + x, (int)startY - (int)sizeY, metalWall);
-
-
-        ////cave
-        //for (int y = 0; y < chunkHeight; y++)
-        //{
-        //    for (int x = 0; x < sizeX; x++)
-        //    {
-        //       Block b = GenerateBlock(x, y, true);
-
-        //    }
-        //}
+        //for (int x = 0; x < sizeX; x++)
+        //    GenerateBlock((int)startX + x, (int)startY - (int)sizeY, metalWall);
 
         GenerateNewChunk(0);
         GenerateNewChunk(1);
@@ -290,8 +287,8 @@ public class Cave : MonoBehaviour
         blockDataDict.Remove(bloc.xy);
         foreach (var item in groundBlockChunks)
         {
-            if(item.Contains(bloc))
-                item.Remove(bloc);
+            if(item.blocks.Contains(bloc))
+                item.blocks.Remove(bloc);
         }
         bloc.Deactivate();
        
@@ -311,6 +308,7 @@ public class Block
     public BlockType type;
     public GemType gemType;
     public GroundBlock instance;
+    public int meshID;
 
     public Block(Vector2Int _xy, int _hp, int _maxHP, BlockType _type, GemType _gemType)
     {
