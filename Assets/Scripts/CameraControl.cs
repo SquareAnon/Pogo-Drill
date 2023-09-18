@@ -46,7 +46,7 @@ public class CameraControl : MonoBehaviour
     private void Update()
     {
         Vector3 p = Pogo._.transform.position;
-        p.x = Mathf.Clamp(p.x, Cave._.startX + cameraTargetXClamp , Cave._.startX + Cave._.sizeX - cameraTargetXClamp );
+        p.x = Mathf.Clamp(p.x, Cave._.startX + cameraTargetXClamp , Cave._.startX + Cave._.sizeX - cameraTargetXClamp - 1 );
         if (p.y >= Cave._.startY + cameraTargetYClamp) p.y = Cave._.startY + cameraTargetYClamp;
         target.transform.position = p;
         camOffset = Vector3.MoveTowards(camOffset, cameraOffset, Time.deltaTime * offsetTransitionSpeed);
@@ -56,6 +56,13 @@ public class CameraControl : MonoBehaviour
     public void CameraOffset(Vector3 raw)
     {
         cameraOffset = raw * camOffsetMultiplier;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Cave c = FindObjectOfType<Cave>();
+        Gizmos.DrawCube(Vector3.right *( c.startX + cameraTargetXClamp), Vector3.one);
+        Gizmos.DrawCube(Vector3.right * (c.startX + c.sizeX - cameraTargetXClamp), Vector3.one);
     }
 
 

@@ -139,6 +139,10 @@ public class Cave : MonoBehaviour
         //loop through x and y and create new blocks and add them to the chunk
         for (int y = 0; y < chunkHeight; y++)
         {
+            Block metalWall = new Block(new Vector2Int(0, 0), 1, 1, BlockType.metal, GemType.none);
+            GenerateBlock((int)startX - 1, chunk * chunkHeight + y, metalWall);
+            GenerateBlock((int)startX + sizeX, chunk * chunkHeight + y, metalWall);
+
             for (int x = 0; x < sizeX; x++)
             {
                 Block b = GenerateBlock(x, chunk * chunkHeight + y, true);
@@ -193,10 +197,11 @@ public class Cave : MonoBehaviour
         //print(groundBlockPool.CountAll);
         //border
         Block metalWall = new Block(new Vector2Int(0, 0), 1, 1, BlockType.metal, GemType.none);
-        for (int y = -10; y < sizeY; y++)
+        for (int y = -10; y < startY; y++)
         {
-            GenerateBlock((int)startX - 1, (int)startY - y, metalWall);
-            GenerateBlock((int)startX + sizeX, (int)startY - y, metalWall);
+            print("wall");
+            GenerateBlock((int)startX - 1, y, metalWall);
+            GenerateBlock((int)startX + sizeX, y, metalWall);
         }
         //for (int x = 0; x < sizeX; x++)
         //    GenerateBlock((int)startX + x, (int)startY - (int)sizeY, metalWall);

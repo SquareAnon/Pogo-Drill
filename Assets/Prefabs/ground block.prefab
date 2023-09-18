@@ -198,7 +198,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   explosionCooldown: 0.1
-  explosionDelay: 2
+  explosionDelay: 0.5
   explosionSprite: {fileID: 4459296479319716461}
   explosiongradient:
     serializedVersion: 2
