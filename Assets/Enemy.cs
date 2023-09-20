@@ -11,6 +11,12 @@ public class Enemy : MonoBehaviour
     public float gravity = .2f;
    [SerializeField] float currentGravity;
 
+    [Header("Jump")]
+    public float jumpHeight = 3;
+    public float jumpVelocity;
+    public float jumpTimer;
+    float lastJumpTime;
+
     [Header("Ground")]
     public float groundCollisionRadius = .2f;
     public float groundCollisionLength = .2f;
@@ -22,6 +28,8 @@ public class Enemy : MonoBehaviour
     public float wallCollisionLength = .2f;
     public float wallCollisionHeight = .2f;
     public float wallCollisionOffset = .2f;
+
+
 
 
     // Start is called before the first frame update
@@ -49,16 +57,30 @@ public class Enemy : MonoBehaviour
 
         if (!grounded)
         {
+            jumpVelocity -= Time.deltaTime * 10;
             velocity = velocity * moveSpeed/2;
             currentGravity += Time.deltaTime * 10;
             velocity += Vector3.down * Mathf.Clamp(currentGravity, 0, gravity);
         }
         else
         {
+            jumpVelocity = 0;
             velocity = velocity * moveSpeed;
             currentGravity = 0;
         }
-        transform.position += velocity * Time.deltaTime;
+
+        if(Time.time >= lastJumpTime + jumpTimer)
+        {
+            Jump();
+        }
+        transform.position += ((jumpVelocity * Vector3.up) + velocity )* Time.deltaTime;
+    }
+
+    public void Jump()
+    {
+        if (!grounded) return;
+        lastJumpTime = Time.time;
+        jumpVelocity = jumpHeight;
     }
 
     private void OnDrawGizmos()
